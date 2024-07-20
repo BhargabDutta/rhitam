@@ -23,46 +23,46 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+            <HoveredLink href="/web-dev">Video Editing</HoveredLink>
+            <HoveredLink href="/interface-design">Video Production</HoveredLink>
+            <HoveredLink href="/seo">Content Writing</HoveredLink>
+            <HoveredLink href="/branding">Website Design</HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+        <MenuItem setActive={setActive} active={active} item="Portfolio">
+          <div className="  text-sm grid grid-cols-1 gap-5 p-0">
             <ProductItem
-              title="Algochurn"
+              title="Video Editing"
               href="https://algochurn.com"
               src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
+              description="description"
             />
             <ProductItem
-              title="Tailwind Master Kit"
+              title="Video Production"
               href="https://tailwindmasterkit.com"
               src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
+              description="description"
             />
             <ProductItem
-              title="Moonbeam"
+              title="Content Writing"
               href="https://gomoonbeam.com"
               src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
+              description="description"
             />
             <ProductItem
-              title="Rogue"
+              title="Web design"
               href="https://userogue.com"
               src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              description="description"
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
+        <MenuItem setActive={setActive} active={active} item="Contact">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            <HoveredLink href="/hobby">Schedule a meeting</HoveredLink>
+            <HoveredLink href="/individual">Call Us</HoveredLink>
+            <HoveredLink href="/team">Email Us</HoveredLink>
+            {/* <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
           </div>
         </MenuItem>
       </Menu>
