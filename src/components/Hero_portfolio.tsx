@@ -7,7 +7,7 @@ import webdev from "@/components/webdev.webp";
 import contentwriter from "@/components/contentwriter.webp";
 export function LayoutGridDemo() {
   return (
-    <div className="h-screen pt-20 w-full">
+    <div className="h-screen pt-0 w-full">
       <LayoutGrid cards={cards} />
     </div>
   );

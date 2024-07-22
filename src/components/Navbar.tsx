@@ -7,9 +7,6 @@ export function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
       <Navbar className="top-2" />
-      <p className="text-black dark:text-white">
-        The Navbar will show on top of the page
-      </p>
     </div>
   );
 }
@@ -21,15 +18,16 @@ function Navbar({ className }: { className?: string }) {
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
+        <HoveredLink href="/portfolio">
+        <MenuItem setActive={setActive} active={active} item="Portfolio"/></HoveredLink>
+          {/* <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Video Editing</HoveredLink>
             <HoveredLink href="/interface-design">Video Production</HoveredLink>
             <HoveredLink href="/seo">Content Writing</HoveredLink>
             <HoveredLink href="/branding">Website Design</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Portfolio">
+          </div> */}
+        {/* </MenuItem> */}
+        <MenuItem setActive={setActive} active={active} item="Services">
           <div className="  text-sm grid grid-cols-1 gap-5 p-0">
             <ProductItem
               title="Video Editing"
