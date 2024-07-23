@@ -10,7 +10,7 @@ export function CanvasRevealEffectDemo2() {
   return (
     <>
     
-      <div className="py-20 flex flex-col items-center justify-center bg-white dark:bg-black w-full mx-auto px-8">
+      <div className="py-20 flex flex-col items-center justify-center dark:bg-black w-full mx-auto px-8">
       <h1 className="text-2xl md:text-4xl text-left font-bold dark:text-white pl-12 w-screen">
           Videography
         </h1>
