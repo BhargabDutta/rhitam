@@ -16,7 +16,7 @@ export function LampDemo() {
         }}
         className="mt-14 text-center text-4xl text-white font-medium tracking-tight text-transparent"
       >
-        <span className="font-extralight text-4xl text-center mb-0">Here`&apos;`s</span><br /> <span className="mt-0 text-7xl">Video Editing</span>
+        <span className="font-extralight text-4xl text-center mb-0">Here&apos;s</span><br /> <span className="mt-0 text-7xl">Video Editing</span>
       </motion.h1>
     </LampContainer>
   );
