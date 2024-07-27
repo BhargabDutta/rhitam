@@ -14,9 +14,9 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className="mt-14 text-center text-4xl text-white font-medium tracking-tight text-transparent"
       >
-        A very Catchy <br /> and hooky text
+        <span className="font-extralight text-4xl text-center mb-0">Here's</span><br /> <span className="mt-0 text-7xl">Video Editing</span>
       </motion.h1>
     </LampContainer>
   );

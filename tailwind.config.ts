@@ -1,3 +1,4 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
@@ -7,7 +8,10 @@ const {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: [
+    "./src/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -29,10 +33,9 @@ module.exports = {
     },
     // rest of the code
   },
-  plugins: [
-    // rest of the code
-    addVariablesForColors,
-  ],
+  darkMode: "class",
+  plugins: [// rest of the code
+    addVariablesForColors,nextui()],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
@@ -66,4 +69,6 @@ const config: Config = {
   },
   plugins: [],
 };
+
+
 export default config;

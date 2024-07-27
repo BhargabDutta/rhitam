@@ -18,8 +18,13 @@ function Navbar({ className }: { className?: string }) {
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
+        <HoveredLink href="/">
+          
+        <MenuItem setActive={setActive} active={active} item="Home"/></HoveredLink>
         <HoveredLink href="/portfolio">
-        <MenuItem setActive={setActive} active={active} item="Portfolio"/></HoveredLink>
+          
+          <MenuItem setActive={setActive} active={active} item="Portfolio"/></HoveredLink>
+  
           {/* <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Video Editing</HoveredLink>
             <HoveredLink href="/interface-design">Video Production</HoveredLink>
@@ -28,7 +33,7 @@ function Navbar({ className }: { className?: string }) {
           </div> */}
         {/* </MenuItem> */}
         <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="  text-sm grid grid-cols-1 gap-5 p-0">
+          <div className="text-sm grid grid-cols-1 gap-5 p-0">
             <ProductItem
               title="Video Editing"
               href="https://algochurn.com"
@@ -55,6 +60,7 @@ function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
+
         <MenuItem setActive={setActive} active={active} item="Contact">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/hobby">Schedule a meeting</HoveredLink>
