@@ -38,11 +38,11 @@ export default function App() {
       onMenuOpenChange={setIsMenuOpen}
       className="bg-black bg-opacity-50 fixed"
     >
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="sm:hidden " justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
-          <Image src={logo_whole} width="0" height="0" className="h-fit w-64" alt=""/>
+          <Image src={logo_whole} width="0" height="0" className="h-fit w-64  absolute left-0 right-0 m-auto" alt=""/>
 
       </NavbarContent>
 
