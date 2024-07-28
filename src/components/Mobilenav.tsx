@@ -11,6 +11,7 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
+import { HoveredLink } from "./ui/navbar-menu";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -53,12 +54,14 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-black bg-opacity-50">
+      <NavbarMenu className="bg-black bg-opacity-50 w-fit">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.text}-${index}`}>
-            <Link className="w-full text-white" href={item.link} size="lg">
+            <HoveredLink href={item.link}>
+            <div className="w-full text-white py-8">
               {item.text}
-            </Link>
+            </div>
+            </HoveredLink>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
