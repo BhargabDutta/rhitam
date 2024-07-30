@@ -29,6 +29,7 @@ export default function App() {
     { text: "About", link: "/about",image:about  },
     { text: "Services", link: "/services" ,image:services },
     { text: "Portfolio", link: "/portfolio" ,image:portfolio },
+    { text: "Contact", link: "/schedule" ,image:contact },
   ];
 
   return (
