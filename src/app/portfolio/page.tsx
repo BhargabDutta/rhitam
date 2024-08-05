@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { SpotlightPreview } from '@/components/Portfolio_hero';
 import { WobbleCardDemo } from '@/components/Portfolio_contentwriting';
@@ -23,4 +24,4 @@ function Portfolioscreen() {
   )
 }
 
-export default Portfolioscreen
+export default Portfolioscreen;
