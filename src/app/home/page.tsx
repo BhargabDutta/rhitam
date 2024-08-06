@@ -1,10 +1,10 @@
 import React from 'react'
-import { HeroParallaxDemo } from './Hero';
+import { HeroParallaxDemo } from '@/app/home/Hero';
 import { HeroScrollDemo } from './Home_hero_next';
 import { LayoutGridDemo } from './Hero_portfolio';
-import { LampDemo } from './Hero_lamp';
-import { StickyScrollRevealDemo } from './Hero_services';
-import { TypewriterEffectSmoothDemo } from './Hero_last';
+
+import { StickyScrollRevealDemo } from '@/app/home/Hero_services';
+import { TypewriterEffectSmoothDemo } from '@/app/home/Hero_last';
 
 const Homescreen = () => {
   return (
@@ -45,7 +45,6 @@ const Homescreen = () => {
           </button>
         </div>
       </div>
-      <LampDemo />
       <div className='mt-40 h-screen'>
         <h1 className="text-2xl md:text-7xl text-center font-bold dark:text-white">
           Our Services

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { LayoutGrid } from "./ui/layout-grid";
+import { LayoutGrid } from "../../components/ui/layout-grid";
 import videography from "@/components/videography.webp";
 import videoedit from "@/components/videoediting.webp";
 import webdev from "@/components/webdev.webp";

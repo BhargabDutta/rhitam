@@ -25,7 +25,7 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    { text: "Home", link: "/",image:home },
+    { text: "Home", link: "/home",image:home },
     { text: "About", link: "/about",image:about  },
     { text: "Services", link: "/services" ,image:services },
     { text: "Portfolio", link: "/portfolio" ,image:portfolio },
@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <Navbar
-      isBordered
+      isbordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className="bg-black bg-opacity-50 fixed"
@@ -50,16 +50,44 @@ export default function App() {
    
 
       <NavbarMenu className="bg-black bg-opacity-50 w-fit">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item.text}-${index}`}>
-            <HoveredLink href={item.link}>
-            <div className="w-full text-white text-sm gap-4 mt-10 flex flex-row ">
-              <Image src={item.image} alt="" width="0" height="0" className="w-5 h-fit"/>
-              {item.text}
+        
+          <NavbarMenuItem>
+            <HoveredLink href="/home">
+            <div className="w-full text-white text-base gap-4 mt-10 flex flex-row ">
+              <Image src={home} alt="" width="0" height="0" className="w-5 h-fit "/>
+              Home
+            </div>
+            </HoveredLink>
+
+            <HoveredLink href="/about">
+            <div className="w-full text-white text-base gap-4 mt-10 flex flex-row ">
+              <Image src={about} alt="" width="0" height="0" className="w-5 h-fit "/>
+              About
+            </div>
+            </HoveredLink>
+
+            <HoveredLink href="/services">
+            <div className="w-full text-white text-base gap-4 mt-10 flex flex-row ">
+              <Image src={services} alt="" width="0" height="0" className="w-5 h-fit "/>
+              Services
+            </div>
+            </HoveredLink>
+
+            <HoveredLink href="/portfolio">
+            <div className="w-full text-white text-base gap-4 mt-10 flex flex-row ">
+              <Image src={portfolio} alt="" width="0" height="0" className="w-5 h-fit "/>
+              Portfolio
+            </div>
+            </HoveredLink>
+
+            <HoveredLink href="/schedule">
+            <div className="w-full text-white text-base gap-4 mt-10 flex flex-row ">
+              <Image src={contact} alt="" width="0" height="0" className="w-5 h-fit "/>
+              Contact
             </div>
             </HoveredLink>
           </NavbarMenuItem>
-        ))}
+        
       </NavbarMenu>
     </Navbar>
   );
