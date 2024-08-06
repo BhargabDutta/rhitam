@@ -39,31 +39,15 @@ export default function App() {
       onMenuOpenChange={setIsMenuOpen}
       className="bg-black bg-opacity-50 fixed"
     >
-      <NavbarContent className="sm:hidden " justify="start">
-        <NavbarMenuToggle
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle className="text-white"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
           <Image src={logo_whole} width="0" height="0" className="h-fit w-64  absolute left-0 right-0 m-auto" alt=""/>
 
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarBrand>
-          {/* Your brand logo or text */}
-          {/* <p className="font-bold text-inherit">ACME</p> */}
-        </NavbarBrand>
-      </NavbarContent>
-{/* 
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Contact
-          </Button>
-        </NavbarItem>
-      </NavbarContent> */}
+   
 
       <NavbarMenu className="bg-black bg-opacity-50 w-fit">
         {menuItems.map((item, index) => (
