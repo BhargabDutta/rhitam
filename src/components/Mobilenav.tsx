@@ -69,8 +69,8 @@ export default function App() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.text}-${index}`}>
             <HoveredLink href={item.link}>
-            <div className="w-full text-white text-2xl gap-4 mt-10 flex flex-row ">
-              <Image src={item.image} alt="" width="0" height="0" className="w-8 h-fit"/>
+            <div className="w-full text-white text-sm gap-4 mt-10 flex flex-row ">
+              <Image src={item.image} alt="" width="0" height="0" className="w-5 h-fit"/>
               {item.text}
             </div>
             </HoveredLink>

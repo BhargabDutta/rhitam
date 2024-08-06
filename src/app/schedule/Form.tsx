@@ -105,7 +105,9 @@ export function SignupFormDemo() {
             <Calender setValue={setSelectedDate} />
           </div>
 
-          <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+         
+        </form>
+        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent my-8 h-[1px] w-full" />
           <button
             className="bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900 bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
             type="submit"
@@ -113,7 +115,6 @@ export function SignupFormDemo() {
             Schedule &rarr;
             <BottomGradient />
           </button>
-        </form>
       </div>
     </>
   );
