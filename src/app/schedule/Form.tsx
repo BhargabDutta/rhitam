@@ -148,7 +148,7 @@ export function SignupFormDemo() {
                 >
                   &times;
                 </button>
-                <p className="text-3xl h-auto w-auto md:p-16 p-10">{greetingMessage}</p>
+                <p className="text-3xl h-auto md:w-auto w-full md:p-16 p-1">{greetingMessage}</p>
               </div>
             </div>
           </>
