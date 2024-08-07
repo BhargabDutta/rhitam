@@ -74,7 +74,8 @@ export function SignupFormDemo() {
           Schedule a meet and we&apos;ll get in touch with you
         </p>
 
-        <form className="my-8 flex flex-col md:flex-row justify-center items-center md:gap-16" onSubmit={handleSubmit}>
+        <form className="my-8 justify-center items-center md:gap-16" onSubmit={handleSubmit}>
+          <div className="flex flex-col md:flex-row my-8 justify-center items-center md:gap-16">
           <div className="w-full h-full mb-4 md:mb-0">
             <div className="flex flex-col md:flex-row md:space-x-2 mb-4">
               <LabelInputContainer className="md:w-1/2">
@@ -124,16 +125,17 @@ export function SignupFormDemo() {
           <div className="flex align-middle justify-center space-y-4 w-full">
             <Calender setValue={setSelectedDate} />
           </div>
+          </div>
 
-          
-        </form>
-        <button
+          <button
             className="bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900 bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
             type="submit"
           >
             Schedule &rarr;
             <BottomGradient />
           </button>
+        </form>
+        
 
         {showGreeting && (
           <>

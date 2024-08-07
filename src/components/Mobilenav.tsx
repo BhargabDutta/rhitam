@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <Navbar
-      isbordered
+      
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className="bg-black bg-opacity-50 fixed"
