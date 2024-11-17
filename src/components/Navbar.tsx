@@ -20,10 +20,18 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <HoveredLink href="/home">
           
-        <MenuItem setActive={setActive} active={active} item="Home"/></HoveredLink>
+        <MenuItem setActive={setActive} active={active} item="Home"/>
+        </HoveredLink>
+
+        <HoveredLink href="/about">
+          
+        <MenuItem setActive={setActive} active={active} item="About"/>
+        </HoveredLink>
+        
         <HoveredLink href="/portfolio">
           
-          <MenuItem setActive={setActive} active={active} item="Portfolio"/></HoveredLink>
+          <MenuItem setActive={setActive} active={active} item="Portfolio"/>
+        </HoveredLink>
   
           {/* <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Video Editing</HoveredLink>
@@ -32,7 +40,7 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/branding">Website Design</HoveredLink>
           </div> */}
         {/* </MenuItem> */}
-        <MenuItem setActive={setActive} active={active} item="Services">
+        {/* <MenuItem setActive={setActive} active={active} item="Services">
           <div className="text-sm grid grid-cols-1 gap-5 p-0">
             <ProductItem
               title="Video Editing"
@@ -59,7 +67,7 @@ function Navbar({ className }: { className?: string }) {
               description="description"
             />
           </div>
-        </MenuItem>
+        </MenuItem> */}
 
         <MenuItem setActive={setActive} active={active} item="Contact">
           <div className="flex flex-col space-y-4 text-sm">

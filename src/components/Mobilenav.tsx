@@ -27,7 +27,7 @@ export default function App() {
   const menuItems = [
     { text: "Home", link: "/home",image:home },
     { text: "About", link: "/about",image:about  },
-    { text: "Services", link: "/services" ,image:services },
+    // { text: "Services", link: "/services" ,image:services },
     { text: "Portfolio", link: "/portfolio" ,image:portfolio },
     { text: "Contact", link: "/schedule" ,image:contact },
   ];
@@ -43,7 +43,7 @@ export default function App() {
         <NavbarMenuToggle className="text-white"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
-          <Image src={logo_whole} width="0" height="0" className="h-fit w-64  absolute left-0 right-0 m-auto" alt=""/>
+          {/* <Image src={logo_whole} width="0" height="0" className="h-fit w-64  absolute left-0 right-0 m-auto" alt=""/> */}
 
       </NavbarContent>
 
@@ -66,12 +66,12 @@ export default function App() {
             </div>
             </HoveredLink>
 
-            <HoveredLink href="/services">
+            {/* <HoveredLink href="/services">
             <div className="w-full text-white text-base gap-4 mt-10 flex flex-row ">
               <Image src={services} alt="" width="0" height="0" className="w-5 h-fit "/>
               Services
             </div>
-            </HoveredLink>
+            </HoveredLink> */}
 
             <HoveredLink href="/portfolio">
             <div className="w-full text-white text-base gap-4 mt-10 flex flex-row ">

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -12,37 +12,52 @@ type Card = {
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
-  const [selected, setSelected] = useState<Card | null>(null);
-  const [lastSelected, setLastSelected] = useState<Card | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<Card | null>(null);
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null);
+
+  const handleMouseEnter = (card: Card) => {
+    if (!selectedCard) {
+      setHoveredCard(card);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!selectedCard) {
+      setHoveredCard(null);
+    }
+  };
 
   const handleClick = (card: Card) => {
-    setLastSelected(selected);
-    setSelected(card);
+    setSelectedCard(selectedCard?.id === card.id ? null : card);
   };
 
   const handleOutsideClick = () => {
-    setLastSelected(selected);
-    setSelected(null);
+    setSelectedCard(null);
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
-      {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 relative">
+      {cards.map((card) => (
+        <div
+          key={card.id}
+          className={cn(card.className, "")}
+          onMouseEnter={() => handleMouseEnter(card)}
+          onMouseLeave={handleMouseLeave}
+        >
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
               card.className,
               "relative overflow-hidden",
-              selected?.id === card.id
+              hoveredCard?.id === card.id || selectedCard?.id === card.id
                 ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
-                : lastSelected?.id === card.id
-                ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
             )}
             layoutId={`card-${card.id}`}
           >
-            {selected?.id === card.id && <SelectedCard selected={selected} />}
+            {(hoveredCard?.id === card.id || selectedCard?.id === card.id) && (
+              <SelectedCard selected={hoveredCard || selectedCard} />
+            )}
             <ImageComponent card={card} />
           </motion.div>
         </div>
@@ -51,9 +66,9 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
         onClick={handleOutsideClick}
         className={cn(
           "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
-          selected?.id ? "pointer-events-auto" : "pointer-events-none"
+          selectedCard ? "pointer-events-auto" : "pointer-events-none"
         )}
-        animate={{ opacity: selected?.id ? 0.3 : 0 }}
+        animate={{ opacity: selectedCard ? 0.3 : 0 }}
       />
     </div>
   );
@@ -66,9 +81,7 @@ const ImageComponent = ({ card }: { card: Card }) => {
       src={card.thumbnail}
       height="500"
       width="500"
-      className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200 cursor-pointer"
-      )}
+      className="object-cover object-top absolute inset-0 h-full w-full transition duration-200 cursor-pointer"
       alt="thumbnail"
     />
   );

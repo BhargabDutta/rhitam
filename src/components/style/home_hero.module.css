@@ -1,0 +1,15 @@
+.image{
+    height: auto;
+    width: auto;
+}
+@media only screen and (max-width:400px){
+    .image{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 60px;
+        width: auto;
+        /* border: 5px solid white; */
+    }
+}
