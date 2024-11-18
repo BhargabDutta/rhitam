@@ -20,7 +20,7 @@ export function TypewriterEffectSmoothDemo() {
     },
   ];
   return (
-    <div className="flex flex-col items-center justify-center h-[40rem] pt-44">
+    <div className="flex flex-col items-center justify-center h-[40rem] pt-44 bg-black">
       <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
         Here You GO!
       </p>
