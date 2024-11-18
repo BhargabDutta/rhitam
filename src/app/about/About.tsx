@@ -15,7 +15,7 @@ export function TracingBeamDemo() {
               {item.badge}
             </h2>
 
-            <div className="text-sm  prose prose-sm dark:prose-invert">
+            <div className="text-sm  prose prose-sm dark:prose-invert text-white">
               {item?.image && (
                 <Image
                   src={item.image}
