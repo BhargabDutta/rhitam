@@ -8,7 +8,7 @@ import { LayoutGridDemo } from '../home/Hero_portfolio';
 
 function Portfolioscreen() {
   return (
-    <div>
+    <div className='bg-black'>
         <SpotlightPreview/>
         <LayoutGridDemo/>
         <hr className='absolute left-0 right-0 m-auto w-1/2 border border-gray-500'/>
