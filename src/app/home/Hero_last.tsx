@@ -16,7 +16,7 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "You",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500",
     },
   ];
   return (
