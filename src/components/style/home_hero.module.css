@@ -1,8 +1,18 @@
 .image{
     height: auto;
     width: auto;
+    display: block;
 }
-@media only screen and (max-width:400px){
+.image_phone{
+    height: auto;
+    width: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@media only screen and (max-width:700px){
     .image{
         position: absolute;
         left: 0;
@@ -11,5 +21,9 @@
         top: 60px;
         width: auto;
         /* border: 5px solid white; */
+        display: none;
+    }
+    .image_phone{
+        display: block;
     }
 }
